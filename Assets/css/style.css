@@ -1,0 +1,36 @@
+*{
+    margin: 0;
+    padding:0;
+}
+
+body {
+    font-family: "Lucida Console", Courier, monospace;
+}
+#foooter {
+    background-image: url(https://b4110f11-951d-491f-9944-fa9d32caeb28.ws-eu01.gitpod.io/mini-browser/workspace/baobab/Assets/logo/in00909-1.700x300.jpg);
+    background-position: cover;
+    background-size: 100% 100%;
+    height: 200px;
+}
+
+ /* Community css */
+#recycle {
+    color:black;
+}
+
+#book {
+    color: red;
+}
+
+#child {
+    color: green;    
+}
+
+
+#community-footer {
+    background-image: url(https://b4110f11-951d-491f-9944-fa9d32caeb28.ws-eu01.gitpod.io/mini-browser/workspace/baobab/Assets/logo/in00909-1.700x300.jpg);
+    background-position: cover;
+    background-size: 100% 100%;
+    height: 200px;
+   
+}
