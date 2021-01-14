@@ -1,0 +1,163 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+    height: 100%;
+    cursor: url(https://cur.cursors-4u.net/games/gam-4/gam372.cur), auto !important;
+}
+.page-title {
+  color: #FF6D00;
+  font-family: Creepy, serif;
+  font-weight: normal;
+  text-align: center;
+  font-size: 6em;
+  position: fixed;
+  top: 50px;
+  right: 0px;
+  width: 300px;
+  border: 2px solid black;
+  height: auto;
+  background-image: url("https://cdn.glitch.com/9d28654d-2aa5-43e8-b710-7c9f917e15b1%2FTop5Dota2Carry.png?v=1597075789571");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  border-radius: 50px;
+}
+
+.game-info-container {
+  grid-column: 1 / -1;
+  top: 50px;
+  right: 0px;
+  justify-content: space-between;
+}
+
+.game-info {
+  font-family: Lunacy, serif;
+  color: #FFBB89;
+  font-size: 2em;
+}
+
+.memory-card {
+  width: 110px;
+  height: 160px;
+  position: relative;
+  box-shadow: 1px 1px 1px rgba(0, 0, 0, 0.3);
+  transform: scale(1);
+  transform-style: preserve-3d;
+  transition: transform 0.5s;
+  background: transparent;
+  cursor: url(https://cur.cursors-4u.net/games/gam-4/gam376.cur), auto !important;
+}
+
+.memory-game {
+  display: grid;
+  grid-template-columns: repeat(5, auto);
+  perspective: 1000px;
+  grid-gap: 10px;
+  margin: 20px;
+  justify-content: center;
+}
+
+.memory-card:active {
+  transform: scale(0.97);
+  transition: transform 0.2s;
+}
+
+/* the flipping event */
+
+.memory-card.flip {
+  transform: rotateY(-180deg);
+}
+
+.front-face,
+.back-face {
+  width: 100%;
+  height: 100%;
+  position: absolute;
+  border-radius: 10px;
+  backface-visibility: hidden;
+}
+
+.front-face {
+  transform: rotateY(180deg);
+}
+
+.bg {
+  height: auto;
+  background-image: url("https://cdn.glitch.com/9d28654d-2aa5-43e8-b710-7c9f917e15b1%2F1-hearthstone-heroes-of-warcraft-lucie-malecot.jpg?v=1596541376163");
+  background-position: center;
+  background-repeat: no-repeat;
+  background-attachment: fixed;
+  background-size: cover;
+}
+
+.overlay-text {
+  display: none;
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  justify-content: center;
+  align-items: center;
+  z-index: 100;
+  color: #FF6D00;
+  font-family: Creepy, serif;
+}
+
+.overlay-text.visible {
+  display: flex;
+  flex-direction: column;
+  animation: overlay-grow 500ms forwards;
+}
+
+@keyframes overlay-grow {
+  from {
+    background-color: rgba(0, 0, 0, 0);
+    font-size: 0;
+  }
+  to {
+    background-color: rgba(0, 0, 0, 0.8);
+    font-size: 10em;
+  }
+}
+
+h2 {
+  color: #093426;
+}
+
+/* this bit needs more work for making it compatible for phones */
+
+@media screen and (max-width: 600px) {
+  .memory-game {
+    padding: 5px;
+    display: grid;
+    grid-template-columns: repeat(4, auto);
+    justify-content: center;
+  }
+  .memory-card {
+    width: 70px;
+    height: 120px;
+  }
+  .game-info-container {
+    display: fixed;
+    position: top;
+  }
+  .page-title {
+    display: none;
+  }
+}
+
+.image-coins {
+  width: 30px;
+  height: 30px;
+  border-radius: 50px;
+}
+
+.image-cards {
+  width: 30px;
+  height: 30px;
+}
